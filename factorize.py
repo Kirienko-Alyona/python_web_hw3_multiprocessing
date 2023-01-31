@@ -24,6 +24,6 @@ def factorize(*number):
 if __name__ == "__main__":
     print(f"Count CPU: {cpu_count()}")
     with Pool(cpu_count()) as p:
-        p.map(factorize, [128, 255, 99999, 10651060])
+        p.map(factorize, [10651060, 99999, 255, 128]) #в такому порядку вводу цифр видно швидкість виконання процесів
         p.close()  # перестати виділяти процеси в пулл
         p.join()  # дочекатися закінчення всіх процесів                    
